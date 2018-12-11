@@ -3,64 +3,52 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:padding="10dp"
-        android:text="Register"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="20dp">
 
         <EditText
-            android:layout_marginTop="30dp"
+            android:id="@+id/profile_userId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_userid"
-            android:hint="User Id"
-            android:id="@+id/reg_userId"
-            />
+            android:hint="User Id"/>
 
         <EditText
+            android:id="@+id/profile_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_name"
-            android:hint="Name"
-            android:id="@+id/reg_name"
-            />
+            android:hint="Name"/>
 
         <EditText
+            android:id="@+id/profile_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_age"
-            android:hint="Age"
-            android:id="@+id/reg_age"
-            />
+            android:hint="Age"/>
 
         <EditText
             android:inputType="textPassword"
+            android:id="@+id/profile_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_password"
-            android:hint="Password"
-            android:id="@+id/reg_password"
-            />
+            android:hint="Password"/>
+
+        <EditText
+            android:id="@+id/profile_quote"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quote"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="REGISTER NEW ACCOUNT"
+            android:text="SAVE"
             android:textColor="#FFFFFF"
-            android:id="@+id/reg_regBTN"
-            android:layout_marginTop="10dp"
+            android:id="@+id/profile_saveBTN"
             />
 
     </LinearLayout>
