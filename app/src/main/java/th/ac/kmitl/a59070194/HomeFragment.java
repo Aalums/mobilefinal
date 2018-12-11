@@ -45,6 +45,9 @@ public class HomeFragment extends Fragment {
         );
         Log.d("PROFILE", "CREATE TABLE");
 
+        _sp = getContext().getSharedPreferences("user", Context.MODE_PRIVATE);
+        _editor = _sp.edit();
+
         TextView _name = getView().findViewById(R.id.home_name);
         TextView _quote = getView().findViewById(R.id.home_quote);
 
@@ -57,9 +60,6 @@ public class HomeFragment extends Fragment {
                 break;
             }
         }
-
-        _sp = getContext().getSharedPreferences("user", Context.MODE_PRIVATE);
-        _editor = _sp.edit();
 
         try {
             String _fileName = "quote.txt";
@@ -105,7 +105,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.main_view, new LoginFragment())
+                        .replace(R.id.main_view, new FriendFragment())
                         .addToBackStack(null)
                         .commit();
                 Log.d("HOME", "GOTO FRIEND");
